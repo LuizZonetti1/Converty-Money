@@ -100,7 +100,8 @@ section {
     font-weight: 400;
 }
 
-.current-value {
+.current-value,
+.currency-value-to-convert {
     color: #555;
     font-size: 20px;
     font-weight: 700;
