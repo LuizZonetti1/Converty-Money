@@ -56,11 +56,11 @@ function changeCurrencyDestiny() {
     }
     if (to === "BitCoin") {
         currencyName.innerHTML = "BitCoin";
-        currencyImg.src = "./assets/BitCoin.png";
+        currencyImg.src = "./assets/bitcoin.png";
     }
     if (to === "Libra") {
         currencyName.innerHTML = "Libra";
-        currencyImg.src = "./assets/Libra.png";
+        currencyImg.src = "./assets/libra.png";
     }
     if (to === "Real") {
         currencyName.innerHTML = "Real";
@@ -84,14 +84,14 @@ function changeCurrencyOrigin() {
     }
     if (from === "BitCoin") {
         currencyNameOrigin.innerHTML = "BitCoin";
-        currencyImgOrigin.src = "./assets/BitCoin.png";
+        currencyImgOrigin.src = "./assets/bitcoin.png";
     }
     if (from === "Libra") {
         currencyNameOrigin.innerHTML = "Libra";
-        currencyImgOrigin.src = "./assets/Libra.png";
+        currencyImgOrigin.src = "./assets/libra.png";
     }
     if (from === "Real") {
-        currencyNameOrigin.innerHTML = "Real";
+        currencyNameOrigin.innerHTML = "real";
         currencyImgOrigin.src = "./assets/real.png";
     }
 }
