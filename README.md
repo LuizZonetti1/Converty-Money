@@ -28,19 +28,20 @@
 
 <p>O <strong>Converty Money</strong> é uma aplicação web responsiva desenvolvida para conversão de moedas internacionais. Com uma interface moderna e user-friendly, permite aos usuários converter valores entre diferentes moedas de forma rápida e precisa.</p>
 
-<p><strong>⚠️ IMPORTANTE:</strong> Este projeto é apenas para fins educacionais e demonstração. As taxas de conversão utilizadas são <strong>valores fictícios</strong> e não refletem cotações reais do mercado. A aplicação ainda não possui integração com APIs de cotação em tempo real.</p>
+<p><strong>🔌 Integração com API:</strong> Esta aplicação utiliza a <em>AwesomeAPI</em> para obter cotações <strong>em tempo real</strong>. A conversão depende exclusivamente da API (sem fallback local) e os controles ficam temporariamente desabilitados até o carregamento das taxas.</p>
 
 <p>Este projeto foi desenvolvido como parte do aprendizado no <a href="https://aulas.devclub.com.br/m/courses">DevClub</a> e expandido com funcionalidades adicionais e melhorias de design.</p>
 
 <h2>✨ Funcionalidades</h2>
 
 <ul>
-  <li>🔄 <strong>Conversão Simulada</strong>: Interface para conversão entre diferentes moedas (valores fictícios)</li>
+  <li>🔄 <strong>Conversão em tempo real (via API)</strong></li>
+  <li>⏱️ <strong>Atualização automática</strong>: cotações renovadas a cada 15 minutos</li>
+  <li>🛡️ <strong>Sem fallback</strong>: UI desabilita em caso de erro de API e exibe mensagem</li>
   <li>🌍 <strong>Múltiplas Moedas</strong>: Suporte para Real, Dólar, Euro, Bitcoin e Libra</li>
   <li>📱 <strong>Design Responsivo</strong>: Interface adaptada para desktop, tablet e mobile</li>
   <li>🎨 <strong>Interface Moderna</strong>: Design clean e profissional</li>
   <li>⚡ <strong>Performance Otimizada</strong>: Carregamento rápido e interações fluidas</li>
-  <li>🎓 <strong>Projeto Educacional</strong>: Demonstração de conceitos web fundamentais</li>
 </ul>
 
 <h2>🚀 Tecnologias</h2>
@@ -51,12 +52,13 @@
   <li><strong>HTML5</strong>: Estrutura semântica e acessível</li>
   <li><strong>CSS3</strong>: Estilização moderna com flexbox e responsividade</li>
   <li><strong>JavaScript ES6+</strong>: Lógica de conversão e manipulação do DOM</li>
-  <li><strong>Valores Simulados</strong>: Taxas de conversão fictícias para demonstração</li>
+  <li><strong>API de câmbio</strong>: AwesomeAPI (USD/BRL, EUR/BRL, GBP/BRL, BTC/BRL)</li>
 </ul>
 
 <h2>🎯 Como Usar</h2>
 
 <ol>
+  <li><strong>Abra a aplicação</strong> e aguarde o carregamento das cotações (os controles ficam desabilitados até concluir)</li>
   <li><strong>Selecione a moeda de origem</strong> no primeiro dropdown</li>
   <li><strong>Escolha a moeda de destino</strong> no segundo dropdown</li>
   <li><strong>Digite o valor</strong> que deseja converter</li>
@@ -105,7 +107,7 @@
 
 <ul>
   <li>Navegador web moderno (Chrome, Firefox, Safari, Edge)</li>
-  <li>Servidor local (opcional, para desenvolvimento)</li>
+  <li>Servidor local (recomendado para evitar bloqueios de CORS ao acessar a API)</li>
 </ul>
 
 <h3>Passos para instalação</h3>
@@ -170,8 +172,6 @@ Converty-Money/
 <h2>🔄 Atualizações Futuras</h2>
 
 <ul>
-  <li>☐ <strong>Integração com API de cotação em tempo real</strong> (Prioridade Alta)</li>
-  <li>☐ <strong>Substituir valores fictícios por dados reais</strong></li>
   <li>☐ Histórico de conversões</li>
   <li>☐ Gráficos de variação cambial</li>
   <li>☐ Modo escuro</li>
@@ -179,6 +179,10 @@ Converty-Money/
   <li>☐ Calculadora de impostos</li>
   <li>☐ Múltiplas linguagens</li>
 </ul>
+
+<h2>❗ Comportamento em caso de erro</h2>
+
+<p>Se a API não responder, os controles permanecem desabilitados e a tela exibirá <em>“Erro ao buscar cotações”</em>. Tente recarregar a página ou aguarde a atualização automática.</p>
 
 <h2>🤝 Contribuição</h2>
 
